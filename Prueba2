@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico NMX-F-605-NORMEX</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; line-height: 1.6; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        .intro { background: #e8f4f8; padding: 20px; border-left: 5px solid #3498db; border-radius: 5px; margin-bottom: 30px; }
+        .question { margin-bottom: 25px; padding: 15px; border: 1px solid #ddd; border-radius: 8px; }
+        .question img { max-width: 100%; border-radius: 5px; margin-bottom: 10px; }
+        button { display: block; width: 100%; background: #27ae60; color: #fff; border: none; padding: 15px; font-size: 18px; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+        button:hover { background: #219150; }
+        #repaso { display: none; background: #eef7f2; padding: 25px; border-left: 5px solid #27ae60; border-radius: 5px; margin-top: 40px; }
+        .video-link { display: inline-block; background: #e74c3c; color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>El Reto de la Inocuidad</h1>
+    
+    <div class="intro">
+        <p>Como futuros profesionales, deben saber algo fundamental: un platillo espectacular no sirve de nada si termina enfermando a un comensal. El Distintivo "H" es el estándar de oro para prevenir ETA.</p>
+        <p><strong>Misión:</strong> Responde los siguientes casos operativos. Al enviar tus respuestas, el sistema liberará automáticamente una sección secreta con tu material de repaso.</p>
+    </div>
+
+    <form id="examenForm">
+        <h2>Bloque 1: Higiene del Personal</h2>
+        <div class="question">
+            <p><strong>1. Basado en la técnica oficial, ¿cuál es el error crítico al secarse las manos con el mandil?</strong></p>
+            <label><input type="radio" name="q1" value="a" required> Falta aplicar gel antes del jabón.</label><br>
+            <label><input type="radio" name="q1" value="b"> Es una violación crítica; debe ser con toalla de papel o aire.</label><br>
+            <label><input type="radio" name="q1" value="c"> El jabón debe ser en barra.</label>
+        </div>
+
+        <h2>Bloque 2: Almacenamiento (Cámara Fría)</h2>
+        <div class="question">
+            <p><strong>2. Si encuentras pollo crudo en la repisa superior y lechugas desinfectadas en la inferior, ¿cuál es el riesgo?</strong></p>
+            <label><input type="radio" name="q2" value="a" required> Fuga de frío.</label><br>
+            <label><input type="radio" name="q2" value="b"> Contaminación cruzada directa por goteo.</label><br>
+            <label><input type="radio" name="q2" value="c"> Ninguno, mientras estén dentro del refrigerador.</label>
+        </div>
+
+        <!-- Puedes agregar aquí las otras 8 preguntas siguiendo el mismo formato de arriba -->
+
+        <button type="submit">Enviar Respuestas y Desbloquear Material</button>
+    </form>
+
+    <!-- SECCIÓN BLOQUEADA -->
+    <div id="repaso">
+        <h2>🔓 Material de Repaso Desbloqueado</h2>
+        <p>¡Excelente! Aquí tienes los micro-recursos para afinar tus conocimientos sobre la NMX-F-605-NORMEX.</p>
+        
+        <h3>1. Técnica de Lavado de Manos</h3>
+        <p>Recuerda: nunca secar con el uniforme ni usar joyas.</p>
+        <a href="https://www.youtube.com/results?search_query=tecnica+lavado+de+manos+oms" target="_blank" class="video-link">Ver Video OMS</a>
+        
+        <h3>2. Contaminación Cruzada</h3>
+        <p>Los alimentos crudos siempre van en las repisas inferiores para evitar goteo sobre los listos para consumo.</p>
+        <a href="https://www.youtube.com/results?search_query=contaminacion+cruzada+alimentos" target="_blank" class="video-link">Ver Video Explicativo</a>
+
+        <h3>Documento Oficial</h3>
+        <a href="https://www.dof.gob.mx" target="_blank" class="video-link" style="background:#34495e;">Descargar PDF NMX-F-605-NORMEX</a>
+    </div>
+
+</div>
+
+<script>
+    document.getElementById('examenForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Evita que la página se recargue
+        
+        // Aquí podríamos evaluar las respuestas, pero para liberar el material:
+        alert("¡Respuestas enviadas con éxito! Tu material de repaso ha sido desbloqueado.");
+        
+        // Ocultar el examen y mostrar el repaso
+        document.getElementById('examenForm').style.display = 'none';
+        document.getElementById('repaso').style.display = 'block';
+        window.scrollTo(0, 0);
+    });
+</script>
+
+</body>
+</html>
